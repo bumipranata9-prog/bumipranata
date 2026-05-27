@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Untuk Kiyo 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div id="hearts-container"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="decorative-hearts">💕 💕 💕</div>
+            <h1>Untuk Kiyo ❤️</h1>
+            <div class="meeting-date">
+                📅 Pertemuan Pertama: 4 Maret
+            </div>
+        </div>
+
+        <!-- Message Section -->
+        <div class="message-section">
+            <div class="message-title">💌 Sesuatu Untukmu</div>
+            <div class="message-text">
+                Halo Kiyo, kamu tahu gak? Sejak kita bertemu pada tanggal 4 Maret, 
+                setiap hari jadi lebih berwarna. Senyumanmu bisa membuat hari yang 
+                paling buruk sekalipun menjadi indah.
+            </div>
+            <div class="message-text">
+                Aku suka cara kamu tertawa, caramu mendengarkan, dan caramu membuat 
+                aku merasa special. Ada sesuatu tentangmu yang membuat hatiku selalu 
+                tertarik untuk lebih dekat.
+            </div>
+            <div class="romantic-quote">
+                ✨ "Kamu bukan hanya orang yang aku suka, tapi juga orang yang membuat 
+                aku ingin menjadi lebih baik. Terima kasih sudah hadir di hidupku." ✨
+            </div>
+            <div class="message-text" style="margin-top: 30px; font-size: 20px; color: #ff1493;">
+                Kamu tahu? Tuhan itu kreatif... tapi nggak sekreatif Dia waktu 
+                menciptakan dirimu. Karena kamu terlalu sempurna! 😊
+            </div>
+        </div>
+
+        <!-- Games Section -->
+        <h2 class="section-title">🎮 Mini Games Untuk Kiyo</h2>
+
+        <!-- Game 1: Crossword -->
+        <div class="game-container">
+            <div class="game-title">🔤 Teka-Teki Silang Kata</div>
+            <p style="text-align: center; color: #333; margin-bottom: 20px;">
+                Temukan nama spesial dengan menyelesaikan teka-teki silang ini!
+            </p>
+            
+            <div style="margin-bottom: 20px;">
+                <div class="crossword-clue"><strong>Across (Horizontal):</strong></div>
+                <div class="crossword-clue">1. Nama orang yang paling aku sukai (4 huruf) 🌟</div>
+                <div class="crossword-clue"><br><strong>Down (Vertical):</strong></div>
+                <div class="crossword-clue">1. Huruf pertama dari nama yang aku cari (1 huruf) 🔤</div>
+            </div>
+
+            <div class="crossword">
+                <div class="crossword-cell" id="cell1">K</div>
+                <div class="crossword-cell" id="cell2">I</div>
+                <div class="crossword-cell" id="cell3">Y</div>
+                <div class="crossword-cell" id="cell4">O</div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="hint-button" onclick="showCrosswordHint()">
+                    💡 Lihat Hint
+                </button>
+                <p id="crossword-hint" style="color: #ff69b4; margin-top: 10px; display: none;">
+                    Nama ini adalah nama orang paling istimewa di hidupku! 🌸
+                </p>
+            </div>
+        </div>
+
+        <!-- Game 2: Unscramble Word -->
+        <div class="game-container">
+            <div class="game-title">🔤 Susun Kata</div>
+            <p style="text-align: center; color: #333; margin-bottom: 20px;">
+                Susun huruf-huruf ini menjadi kata yang bermakna!
+            </p>
+            <div class="word-game">
+                <p style="color: #333; margin-bottom: 15px;">Susun huruf berikut menjadi satu kata:</p>
+                <div class="scrambled-word">Y I K O</div>
+                <input type="text" class="word-input" id="word-answer" placeholder="Tuliskan jawaban..." onkeyup="checkWord()">
+                <p id="word-result" style="color: #ff1493; font-weight: bold; margin-top: 10px;"></p>
+            </div>
+        </div>
+
+        <!-- Game 3: Love Memory Game -->
+        <div class="game-container">
+            <div class="game-title">🎮 Memory Game</div>
+            <p style="text-align: center; color: #333; margin-bottom: 20px;">
+                Temukan pasangan emoji love! (Cari pasangan hati)
+            </p>
+            <div class="memory-grid" id="memory-grid"></div>
+            <p id="memory-result" style="text-align: center; color: #ff1493; font-weight: bold; margin-top: 15px;"></p>
+        </div>
+
+        <!-- Final Question Section -->
+        <div class="question-section">
+            <div class="big-question">
+                💕 Bibi mau jadi pacar mas ga? 💕
+            </div>
+            
+            <div class="button-container">
+                <button class="yes-btn" onclick="yesClicked()">
+                    ✨ YA! ✨
+                </button>
+                <button class="no-btn" id="no-btn" onmouseenter="moveNoButton()">
+                    Tidak
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message">
+        <h2>🎉 YAAAAAY! 🎉</h2>
+        <p>Aku sangat senang dengarannya!</p>
+        <p style="font-size: 24px;">💕 Terima kasih sudah menjadi bagian dari hidupku! 💕</p>
+        <div class="hearts-burst" style="font-size: 60px;">
+            💕 💕 💕 💕 💕
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
