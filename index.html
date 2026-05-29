@@ -3,132 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💕 Untuk Kiyo 💕</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dewakiyo - Romantic Spotify Playlists</title>
+    <link rel="stylesheet" href="dewakiyo/styles.css">
 </head>
 <body>
-    <!-- Floating hearts background -->
-    <div id="hearts-container"></div>
+    <!-- Background Elements -->
+    <div class="background">
+        <div class="blur-bg blur-1"></div>
+        <div class="blur-bg blur-2"></div>
+        <div class="blur-bg blur-3"></div>
+        <div class="stars"></div>
+    </div>
 
-    <div class="container">
-        <div class="header">
-            <div class="decorative-hearts">💕 💕 💕</div>
-            <h1>Untuk Kiyo ❤️</h1>
-            <div class="meeting-date">
-                📅 Pertemuan Pertama: 4 Maret
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <h1>Dewakiyo</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Beranda</a>
+                <a href="#playlists">Playlist</a>
+                <a href="#about">Tentang</a>
             </div>
         </div>
+    </nav>
 
-        <!-- Message Section -->
-        <div class="message-section">
-            <div class="message-title">💌 Sesuatu Untukmu</div>
-            <div class="message-text">
-                Halo Kiyo, kamu tahu gak? Sejak kita bertemu pada tanggal 4 Maret, 
-                setiap hari jadi lebih berwarna. Senyumanmu bisa membuat hari yang 
-                paling buruk sekalipun menjadi indah.
-            </div>
-            <div class="message-text">
-                Aku suka cara kamu tertawa, caramu mendengarkan, dan caramu membuat 
-                aku merasa special. Ada sesuatu tentangmu yang membuat hatiku selalu 
-                tertarik untuk lebih dekat.
-            </div>
-            <div class="romantic-quote">
-                ✨ "Kamu bukan hanya orang yang aku suka, tapi juga orang yang membuat 
-                aku ingin menjadi lebih baik. Terima kasih sudah hadir di hidupku." ✨
-            </div>
-            <div class="message-text" style="margin-top: 30px; font-size: 20px; color: #ff1493;">
-                Kamu tahu? Tuhan itu kreatif... tapi nggak sekreatif Dia waktu 
-                menciptakan dirimu. Karena kamu terlalu sempurna! 😊
-            </div>
-        </div>
-
-        <!-- Games Section -->
-        <h2 class="section-title">🎮 Mini Games Untuk Kiyo</h2>
-
-        <!-- Game 1: Crossword -->
-        <div class="game-container">
-            <div class="game-title">🔤 Teka-Teki Silang Kata</div>
-            <p style="text-align: center; color: #333; margin-bottom: 20px;">
-                Temukan nama spesial dengan menyelesaikan teka-teki silang ini!
-            </p>
-            
-            <div style="margin-bottom: 20px;">
-                <div class="crossword-clue"><strong>Across (Horizontal):</strong></div>
-                <div class="crossword-clue">1. Nama orang yang paling aku sukai (4 huruf) 🌟</div>
-                <div class="crossword-clue"><br><strong>Down (Vertical):</strong></div>
-                <div class="crossword-clue">1. Huruf pertama dari nama yang aku cari (1 huruf) 🔤</div>
-            </div>
-
-            <div class="crossword">
-                <div class="crossword-cell" id="cell1">K</div>
-                <div class="crossword-cell" id="cell2">I</div>
-                <div class="crossword-cell" id="cell3">Y</div>
-                <div class="crossword-cell" id="cell4">O</div>
-            </div>
-
-            <div style="text-align: center;">
-                <button class="hint-button" onclick="showCrosswordHint()">
-                    💡 Lihat Hint
-                </button>
-                <p id="crossword-hint" style="color: #ff69b4; margin-top: 10px; display: none;">
-                    Nama ini adalah nama orang paling istimewa di hidupku! 🌸
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">Sadewa & Kiyo</h2>
+                <p class="hero-subtitle">Koleksi Lagu Romantis untuk Momen Spesial Anda</p>
+                <p class="hero-description">
+                    Dengarkan melodi cinta yang mempercantik setiap detik dalam hidup Anda
                 </p>
             </div>
+            <div class="music-visualizer">
+                <div class="bar" style="animation-delay: 0s;"></div>
+                <div class="bar" style="animation-delay: 0.1s;"></div>
+                <div class="bar" style="animation-delay: 0.2s;"></div>
+                <div class="bar" style="animation-delay: 0.3s;"></div>
+                <div class="bar" style="animation-delay: 0.4s;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playlists Section -->
+    <section class="playlists-section" id="playlists">
+        <div class="section-header">
+            <h2>Playlist Romantis Kami</h2>
+            <p>Geser untuk melihat lebih banyak 👉</p>
         </div>
 
-        <!-- Game 2: Unscramble Word -->
-        <div class="game-container">
-            <div class="game-title">🔤 Susun Kata</div>
-            <p style="text-align: center; color: #333; margin-bottom: 20px;">
-                Susun huruf-huruf ini menjadi kata yang bermakna!
+        <div class="playlist-container">
+            <div class="playlist-wrapper" id="playlistWrapper">
+                <!-- Playlist Cards -->
+                <div class="playlist-card" data-spotify="https://open.spotify.com/playlist/37i9dQZF1DZ52bnVsM3m53">
+                    <div class="card-cover">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=400&h=400&fit=crop" alt="Moonlight Romance">
+                        <div class="cover-overlay">
+                            <button class="play-btn" title="Putar di Spotify" aria-label="Play Moonlight Romance">
+                                <span>▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Moonlight Romance</h3>
+                        <p class="playlist-desc">Lagu-lagu romantis di bawah cahaya bulan</p>
+                        <button class="spotify-btn">Putar di Spotify</button>
+                    </div>
+                </div>
+
+                <div class="playlist-card" data-spotify="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M">
+                    <div class="card-cover">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop" alt="Sunset Vibes">
+                        <div class="cover-overlay">
+                            <button class="play-btn" title="Putar di Spotify" aria-label="Play Sunset Vibes">
+                                <span>▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sunset Vibes</h3>
+                        <p class="playlist-desc">Suasana hangat saat matahari terbenam</p>
+                        <button class="spotify-btn">Putar di Spotify</button>
+                    </div>
+                </div>
+
+                <div class="playlist-card" data-spotify="https://open.spotify.com/playlist/37i9dQZF1DZ52bnVsM3m53">
+                    <div class="card-cover">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="Starlight Dreams">
+                        <div class="cover-overlay">
+                            <button class="play-btn" title="Putar di Spotify" aria-label="Play Starlight Dreams">
+                                <span>▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Starlight Dreams</h3>
+                        <p class="playlist-desc">Mimpi indah dalam cahaya bintang</p>
+                        <button class="spotify-btn">Putar di Spotify</button>
+                    </div>
+                </div>
+
+                <div class="playlist-card" data-spotify="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M">
+                    <div class="card-cover">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop" alt="Love Melodies">
+                        <div class="cover-overlay">
+                            <button class="play-btn" title="Putar di Spotify" aria-label="Play Love Melodies">
+                                <span>▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Love Melodies</h3>
+                        <p class="playlist-desc">Melodi cinta yang menyentuh hati</p>
+                        <button class="spotify-btn">Putar di Spotify</button>
+                    </div>
+                </div>
+
+                <div class="playlist-card" data-spotify="https://open.spotify.com/playlist/37i9dQZF1DZ52bnVsM3m53">
+                    <div class="card-cover">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop" alt="Midnight Whispers">
+                        <div class="cover-overlay">
+                            <button class="play-btn" title="Putar di Spotify" aria-label="Play Midnight Whispers">
+                                <span>▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Midnight Whispers</h3>
+                        <p class="playlist-desc">Bisikan lembut di tengah malam</p>
+                        <button class="spotify-btn">Putar di Spotify</button>
+                    </div>
+                </div>
+
+                <div class="playlist-card" data-spotify="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M">
+                    <div class="card-cover">
+                        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&h=400&fit=crop" alt="Eternal Love">
+                        <div class="cover-overlay">
+                            <button class="play-btn" title="Putar di Spotify" aria-label="Play Eternal Love">
+                                <span>▶</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Eternal Love</h3>
+                        <p class="playlist-desc">Cinta yang bertahan selamanya</p>
+                        <button class="spotify-btn">Putar di Spotify</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicators -->
+            <div class="scroll-indicator" id="scrollIndicator">
+                <span class="indicator-dot active"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>Tentang Dewakiyo</h2>
+            <p>
+                Dewakiyo adalah kurator playlist romantis yang menyediakan koleksi lagu-lagu terbaik 
+                untuk menemani setiap momen spesial dalam hidup Anda. Dengan tema Sadewa & Kiyo, 
+                kami menghadirkan suasana mistis dan romantis yang sempurna untuk refleksi diri.
             </p>
-            <div class="word-game">
-                <p style="color: #333; margin-bottom: 15px;">Susun huruf berikut menjadi satu kata:</p>
-                <div class="scrambled-word">Y I K O</div>
-                <input type="text" class="word-input" id="word-answer" placeholder="Tuliskan jawaban..." onkeyup="checkWord()">
-                <p id="word-result" style="color: #ff1493; font-weight: bold; margin-top: 10px;"></p>
+            <div class="features">
+                <div class="feature-item">
+                    <span class="feature-icon">🎵</span>
+                    <h3>Kurasi Spesial</h3>
+                    <p>Setiap lagu dipilih dengan cermat</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✨</span>
+                    <h3>Aesthetic Design</h3>
+                    <p>Desain visual yang memukau</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎧</span>
+                    <h3>Mobile Friendly</h3>
+                    <p>Dengarkan di mana saja, kapan saja</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Game 3: Love Memory Game -->
-        <div class="game-container">
-            <div class="game-title">🎮 Memory Game</div>
-            <p style="text-align: center; color: #333; margin-bottom: 20px;">
-                Temukan pasangan emoji love! (Cari pasangan hati)
-            </p>
-            <div class="memory-grid" id="memory-grid"></div>
-            <p id="memory-result" style="text-align: center; color: #ff1493; font-weight: bold; margin-top: 15px;"></p>
-        </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Dewakiyo - Sadewa & Kiyo Romantic Playlists</p>
+        <p>Powered by Spotify</p>
+    </footer>
 
-        <!-- Final Question Section -->
-        <div class="question-section">
-            <div class="big-question">
-                💕 Bibi mau jadi pacar mas ga? 💕
-            </div>
-            
-            <div class="button-container">
-                <button class="yes-btn" onclick="yesClicked()">
-                    ✨ YA! ✨
-                </button>
-                <button class="no-btn" id="no-btn" onmouseenter="moveNoButton()">
-                    Tidak
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Success Message -->
-    <div class="success-message" id="success-message">
-        <h2>🎉 YAAAAAY! 🎉</h2>
-        <p>Aku sangat senang dengarannya!</p>
-        <p style="font-size: 24px;">💕 Terima kasih sudah menjadi bagian dari hidupku! 💕</p>
-        <div class="hearts-burst" style="font-size: 60px;">
-            💕 💕 💕 💕 💕
-        </div>
-    </div>
-
-    <div class="overlay" id="overlay"></div>
-
-    <script src="script.js"></script>
+    <script src="dewakiyo/script.js"></script>
 </body>
 </html>
